@@ -1,6 +1,10 @@
-[gd_scene format=3 uid="uid://cca310rliy2jy"]
+[gd_scene load_steps=2 format=3 uid="uid://cca310rliy2jy"]
+
+[ext_resource type="Texture2D" uid="uid://cp4iq5fd6j8be" path="res://art/background.png" id="1_akhwx"]
 
 [node name="Battle" type="Node2D"]
 metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_akhwx")
+centered = false
