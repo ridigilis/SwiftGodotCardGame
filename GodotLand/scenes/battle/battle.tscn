@@ -6,5 +6,7 @@
 metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.321569, 0.321569, 0.321569, 1)
 texture = ExtResource("1_akhwx")
 centered = false
+metadata/_edit_lock_ = true
