@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bexw3rsowxody"]
+[gd_scene load_steps=3 format=3 uid="uid://bexw3rsowxody"]
 
 [ext_resource type="Theme" uid="uid://bcdrvl1o4kkmd" path="res://main_theme.tres" id="1_jc3aw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uce5a"]
+size = Vector2(25, 30)
 
 [node name="CardUI" type="Control"]
 layout_mode = 3
@@ -32,3 +35,11 @@ grow_vertical = 2
 text = "state"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="DropPointDetector" type="Area2D" parent="."]
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
+position = Vector2(12.5, 15)
+shape = SubResource("RectangleShape2D_uce5a")
