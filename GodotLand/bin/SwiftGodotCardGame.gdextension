@@ -1,0 +1,9 @@
+[configuration]
+entry_symbol = "swift_entry_point"
+compatibility_minimum = 4.2
+
+[libraries]
+macos.debug = "res://../SwiftLand/.build/debug/libSwiftGodotCardGame.dylib"
+
+[dependencies]
+macos.debug = {"res://../SwiftLand/.build/debug/libSwiftGodot.dylib" : ""}
