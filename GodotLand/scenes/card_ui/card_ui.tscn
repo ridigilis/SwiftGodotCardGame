@@ -5,9 +5,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uce5a"]
 size = Vector2(25, 30)
 
-[node name="CardUI" type="Control"]
-custom_minimum_size = Vector2(25, 25)
-layout_mode = 3
+[node name="CardUI" type="CardUI"]
+custom_minimum_size = Vector2(25, 30)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -24,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.101961, 0.282353, 0.176471, 1)
 
 [node name="State" type="Label" parent="."]
@@ -44,3 +44,14 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
 position = Vector2(12.5, 15)
 shape = SubResource("RectangleShape2D_uce5a")
+
+[node name="CardStateMachine" type="CardStateMachine" parent="." node_paths=PackedStringArray("initialState")]
+initialState = NodePath("CardBaseState")
+
+[node name="CardBaseState" type="CardBaseState" parent="CardStateMachine"]
+
+[node name="CardClickedState" type="CardClickedState" parent="CardStateMachine"]
+
+[node name="CardDraggingState" type="CardDraggingState" parent="CardStateMachine"]
+
+[node name="CardReleasedState" type="CardReleasedState" parent="CardStateMachine"]
