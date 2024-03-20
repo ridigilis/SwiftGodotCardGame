@@ -21,7 +21,6 @@ final class CardReleasedState: CardState {
 
 			if !card.targets.isEmpty {
 				played = true
-				GD.print("play card for target(s)", card.targets)
 			}
 		}
 	}
