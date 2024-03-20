@@ -2,6 +2,8 @@ import SwiftGodot
 
 @Godot
 final class CardReleasedState: CardState {
+	var played: Bool = false
+
 	required init() {
 		super.init()
 		state = CardState.State.released.rawValue
@@ -14,8 +16,18 @@ final class CardReleasedState: CardState {
 
 	override func enter() {
 		if let card = cardUI {
-		card.Color.color = Color.purple
-		card.State.text = "RELEASED"
+			card.Color.color = Color.purple
+			card.State.text = "RELEASED"
+
+			if !card.targets.isEmpty {
+				played = true
+				GD.print("play card for target(s)", card.targets)
+			}
 		}
+	}
+
+	override func onInput(event: InputEvent) {
+		 if played { return }
+		 emit(signal: CardState.transitionRequested, self, CardState.State.base.rawValue)
 	}
 }
