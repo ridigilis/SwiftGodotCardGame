@@ -24,7 +24,7 @@ shape = SubResource("RectangleShape2D_kuh0x")
 
 [node name="BattleUI" type="CanvasLayer" parent="." groups=["ui_layer"]]
 
-[node name="Hand" type="HBoxContainer" parent="BattleUI"]
+[node name="Hand" type="Hand" parent="BattleUI"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0

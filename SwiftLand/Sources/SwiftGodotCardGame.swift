@@ -1,6 +1,7 @@
 import SwiftGodot
 
 let allNodes: [Wrapped.Type] = [
+	Hand.self,
 	CardUI.self,
 	CardStateMachine.self,
 	CardState.self,
