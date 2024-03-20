@@ -19,7 +19,7 @@ final class CardBaseState: CardState {
 					await card.ready
 				}
 			}
-			emit(signal: CardUI.reparentRequested, card)
+			card.emit(signal: CardUI.reparentRequested, card)
 			card.Color.color = Color.green
 			card.State.text = "BASE"
 			card.pivotOffset = Vector2.zero
