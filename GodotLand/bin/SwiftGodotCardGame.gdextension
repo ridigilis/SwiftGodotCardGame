@@ -1,6 +1,7 @@
 [configuration]
 entry_symbol = "swift_entry_point"
 compatibility_minimum = 4.2
+reloadable = true
 
 [libraries]
 macos.debug = "res://../SwiftLand/.build/debug/libSwiftGodotCardGame.dylib"
